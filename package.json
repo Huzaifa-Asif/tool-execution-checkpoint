@@ -1,0 +1,27 @@
+{
+  "name": "tool-execution-checkpoint",
+  "version": "1.0.0",
+  "description": "Checkpoint AI tool execution separately from result delivery, without rerunning completed side effects after reconnects.",
+  "keywords": ["ai", "agents", "tool-calling", "idempotency", "checkpoint", "recovery", "llm"],
+  "license": "MIT",
+  "author": "Huzaifa Asif",
+  "repository": { "type": "git", "url": "git+https://github.com/Huzaifa-Asif/tool-execution-checkpoint.git" },
+  "bugs": { "url": "https://github.com/Huzaifa-Asif/tool-execution-checkpoint/issues" },
+  "homepage": "https://github.com/Huzaifa-Asif/tool-execution-checkpoint#readme",
+  "type": "module",
+  "main": "./src/index.cjs",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js", "require": "./src/index.cjs" } },
+  "files": ["src", "examples", "README.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "SECURITY.md"],
+  "engines": { "node": ">=18" },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test",
+    "test:coverage": "node --experimental-test-coverage --test",
+    "check": "npm run build && npm run lint && npm run test:coverage && npm pack --dry-run"
+  },
+  "publishConfig": { "access": "public" }
+}

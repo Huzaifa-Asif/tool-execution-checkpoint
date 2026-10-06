@@ -1,0 +1,9 @@
+test/
+scripts/
+examples/
+.github/
+.gitignore
+.npmignore
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
