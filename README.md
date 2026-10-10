@@ -172,6 +172,16 @@ The failure mode was independently reported against Anthropic’s [TypeScript SD
 
 Related alternatives include [AWS Lambda Powertools idempotency](https://docs.aws.amazon.com/powertools/typescript/latest/features/idempotency/) for Lambda workloads, [`armorer/idempotency`](https://github.com/armorer/idempotency) for a broader tool framework, and durable workflow systems for full orchestration. Prefer those when their runtime and storage model already fit.
 
+## Runnable example and related tool
+
+[`examples/cas-store.mjs`](examples/cas-store.mjs) demonstrates execution and
+delivery claims against a minimal compare-and-swap store. It is executed by
+`npm run check` and ships in the npm tarball. Replace the in-memory function
+with a real transactional store before production use.
+
+For deterministically closing every announced tool call after cancellation or
+limits, see [`tool-call-closure`](https://www.npmjs.com/package/tool-call-closure).
+
 ## Security
 
 See [SECURITY.md](SECURITY.md). Please report vulnerabilities privately rather than opening a public issue.

@@ -2,6 +2,13 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and semantic versioning.
 
+## [1.0.1] - 2026-10-10
+
+### Added
+
+- Execute the shipped compare-and-swap store example as part of the aggregate package check.
+- Document the related deterministic tool-call closure boundary.
+
 ## [1.0.0] - 2026-10-07
 
 ### Added
